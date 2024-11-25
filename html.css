@@ -1,0 +1,289 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo general */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #1e1e1f;
+  background: -webkit-linear-gradient(to left, #545458, #4e54c8);
+  width: 100%;
+  height: 100vh;
+  color: #fff;
+  overflow: hidden;
+  position: relative; /* Aseguramos que el contexto de z-index funcione correctamente */
+}
+
+/* Botón de menú */
+.btn-menu {
+  font-size: 30px;
+  padding: 10px;
+  background-color: #ffffff;
+  color: #161515;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  position: absolute;
+  top: 15%;
+  left: 50px;
+  z-index: 1000;
+}
+
+.btn-menu:hover {
+  background-color: #333;
+}
+
+/* Menú lateral (oculto inicialmente) */
+.menu-izq {
+  display: block;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  transform: translateX(-250px);
+  background-color: #585858;
+  border-radius: 8px;
+  padding: 10px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1001; /* Un valor suficiente para estar por encima del fondo */
+  width: 200px;
+  transition: transform 0.3s ease;
+}
+
+.menu-izq.active {
+  transform: translateX(70px);
+  top: 120px;
+  left: 25px;
+}
+
+.menu-izq ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-izq ul li {
+  margin: 10px 0;
+}
+
+.menu-izq ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.menu-izq ul li a:hover {
+  background-color: #333;
+  transform: scale(1.1);
+}
+
+/* Menú de redes sociales */
+.menu {
+  position: absolute;
+  top: 15%;
+  right: 50px;
+  transform: translateY(-50%);
+  z-index: 1001; /* Un valor suficiente para estar por encima del fondo */
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+.menu ul li {
+  display: inline-block;
+}
+
+.menu ul li a {
+  font-size: 36px;
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu ul li a.facebook {
+  color: #405de6;
+}
+
+.menu ul li a.twitter {
+  color: #1da1f2;
+}
+
+.menu ul li a.instagram {
+  background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d, #f56040, #f77737, #fcaf45, #ffdc80);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.menu ul li a:hover {
+  transform: scale(1.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.menu ul li a:active {
+  transform: scale(1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Texto de contexto */
+.context {
+  width: 100%;
+  position: absolute;
+  top: 42vh;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.context h1 {
+  color: #fff;
+  font-size: 60px;
+  margin-top: -50px;
+  animation: fadeIn 3s;
+}
+
+
+
+
+/* Fondo animado */
+.area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* El fondo está por debajo de todo */
+}
+
+.circles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.circles li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  animation: animate 25s linear infinite;
+  bottom: -150px;
+}
+
+.circles li:nth-child(1) {
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+}
+
+.circles li:nth-child(2) {
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+
+.circles li:nth-child(3) {
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 4s;
+}
+
+.circles li:nth-child(4) {
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 6s;
+}
+
+.circles li:nth-child(5) {
+  left: 80%;
+  width: 90px;
+  height: 90px;
+  animation-delay: 8s;
+}
+/* Botón debajo del h1 */
+/* Botón debajo del h1 */
+.btn-navegar {
+  margin-top: 20px; /* Ajusta este valor según la distancia deseada del h1 */
+  padding: 12px 24px;
+  font-size: 20px; /* Aumenta el tamaño de la fuente */
+  font-weight: bold;
+  color: #ffffff; /* Texto blanco */
+  background-color: transparent; /* Fondo transparente */
+  border: none; /* Sin borde */
+  border-radius: 50px; /* Bordes redondeados */
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+  text-decoration: none;
+  position: relative; /* Para posicionar la flecha */
+  left: 50%; /* Centrado horizontalmente */
+  transform: translate(-50%, 0); /* Mantiene el centrado */
+  z-index: 2; /* Para que no quede debajo de otros elementos */
+  top: calc(51vh + 50px); /* Ajusta la posición verticalmente para que esté justo debajo del h1 */
+  overflow: hidden; /* Para ocultar la animación de la flecha */
+}
+
+.btn-navegar:hover {
+  color: #000000; /* Cambia el color del texto al hacer hover */
+  transform: scale(1.1) translate(-50%, 0); /* Efecto de escala al hacer hover */
+}
+
+/* Flecha */
+.btn-navegar::after {
+  content: "→"; /* Flecha a la derecha */
+  font-size: 28px; /* Aumenta el tamaño de la flecha */
+  margin-left: 10px; /* Espacio entre el texto y la flecha */
+  transition: transform 0.3s ease, color 0.3s ease; /* Transición suave para la flecha */
+  display: inline-block; /* Para aplicar transformaciones */
+}
+
+.btn-navegar:hover::after {
+  transform: translateX(5px) rotate(15deg); /* Mueve y rota la flecha al hacer hover */
+  color: #000000; /* Cambia el color de la flecha al hacer hover */
+}
+
+/* Efecto de subrayado en el texto */
+.btn-navegar:hover {
+  text-shadow: 0 0 5px rgba(238, 228, 229, 0.7), 0 0 10px rgba(255, 71, 87, 0.5); /* Sombra de texto al hacer hover */
+}
+/* Animación */
+@keyframes animate {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+
+  100% {
+    transform: translateY(-800px) scale(1.5);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/9d063833db.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="html.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+</head>
+<body>
+   
+  <button class="btn-menu" onclick="toggleMenu()">☰</button>
+
+  <div class="menu-izq">
+    <ul>
+      <li><a href="basedatos.html">Base de Datos</a></li>
+      <li><a href="implantacion.html">Implementación de Sistemas</a></li>
+      <li><a href="planificacion.html">Planificación y Administración de Redes</a></li>
+      <li><a href="lenguaje.html">Lenguajes de Marcas</a></li>
+    </ul>
+  </div>
+
+  <div class="menu">
+    <ul>
+      <li><a href="https://www.linkedin.com/in/daniel-jimenez-7105a2255?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+      <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+      <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+    </ul>
+  </div>
+  <button class="btn-navegar" onclick="redirectToPage()">Mis proyectos</button>
+  <div class="context">
+    <h1 class="animate__fadeIn">Hola, soy Daniel Jimenez.<br>Pero me puedes llamar Daniel.<br>Soy técnico en Sistemas Microinformáticos y Redes.</h1> 
+  </div>
+
+  <div class="area">
+    <ul class="circles">
+      <li></li><li></li><li></li><li></li><li></li>
+      <li></li><li></li><li></li><li></li><li></li>
+    </ul>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      var menu = document.querySelector('.menu-izq');
+      menu.classList.toggle('active');
+    }
+  </script>
+  <script>
+  function redirectToPage() {
+    window.location.href = "proyecto.html";
+  }
+  </script>
+</body>
+</html>
